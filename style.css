@@ -1,0 +1,129 @@
+html,
+body {
+  font-family: "Open Sans", "Arial", sans-serif;
+}
+
+.visually-hidden-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+.maxwidth-theme {
+  max-width: 1710px;
+  margin: 0 auto;
+  padding: 0 30px;
+  float: none;
+  background-color: #fff;
+}
+
+.star-required {
+  color: #d93333;
+}
+
+.order-wrapper input,
+.order-wrapper select,
+.order-wrapper textarea {
+  width: calc(100% - 30px);
+  margin-bottom: 30px;
+  padding: 8px 13px 7px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  transition: .2s ease-out;
+}
+
+.contacts__field-input--select {
+  width: 100% !important;
+}
+
+.order-wrapper textarea {
+  resize: none;
+}
+
+.order-wrapper input:hover,
+.order-wrapper select:hover,
+.order-wrapper textarea:hover,
+.order-wrapper input:focus,
+.order-wrapper select:focus,
+.order-wrapper textarea:focus {
+  border-color: #009CA6;
+}
+
+.order-section {
+  margin-bottom: 40px;
+  padding: 20px 30px 20px;
+  border: 2px solid #009ca6;
+  border-radius: 4px;
+}
+
+.order-header {
+  margin: 0;
+  margin-bottom: 35px;
+  padding: 0;
+  font-size: 20px;
+  line-height: 24px;
+  color: #333;
+  font-weight: bold;
+}
+
+.payment-delivery--company {
+  border-top: 1px solid #009ca6;
+}
+
+.payment-delivery .label-wrapper {
+  margin-bottom: 25px;
+  color: #777;
+}
+
+.payment-delivery .label-wrapper:hover,
+.payment-delivery .label-wrapper:focus {
+  color: #009CA6;
+}
+
+.company-info__label-span,
+.address-commentary__textarea-label {
+  display: inline-block;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+.contacts__label-span {
+  font-weight: bold;
+}
+
+.submit-section__btn {
+  float: none !important;
+  text-shadow: none;
+  color: #FFF;
+  padding: 11px 40px 13px;
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: bold;
+  display: inline-block !important;
+  margin-top: 0px !important;
+  background-color: #009CA6;
+  border: none;
+  border-radius: 2px;
+  -webkit-transition: background-color 0.3s ease;
+  -moz-transition: background-color 0.3s ease;
+  -ms-transition: background-color 0.3s ease;
+  -o-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+
+.submit-section__btn:hover,
+.submit-section__btn:focus {
+  background-color: #00b9c5;
+}
+
+.submit-section__btn:active {
+  box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+}
+
+label.active {
+  color: #000;
+}

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Оформление заказа</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700&display=swap&subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-grid-only@1.0.0/bootstrap.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="maxwidth-theme">
+  <div class="col-sm-9">
+    <form class="" action="index.html" method="post">
+      <div class="order-wrapper">
+        <section class="order-wrapper__contacts contacts order-section">
+          <h2 class="contacts__header order-header order-header--person">Ваши контактные данные</h2>
+          <h2 class="contacts__header order-header order-header--company">Контактные данные, доставка и оплата</h2>
+          <div class="contacts__fields">
+            <div class="contacts__field row">
+              <div class="label-wrapper label-wrapper--small col-sm-6">
+                <label class="contacts__field-label" for="orderLegalEntity">
+                  <span class="contacts__label-span">Тип плательщика</span>
+                </label>
+              </div>
+              <div class="input-wrapper input-wrapper--small col-sm-6">
+                <select class="contacts__field-input contacts__field-input--select" id="orderLegalEntity" name="orderLegalEntity">
+                  <option value="person" selected>Физическое лицо</option>
+                  <option value="company">Юридическое лицо</option>
+                </select>
+              </div>
+            </div>
+            <div class="contacts__field row">
+              <div class="label-wrapper label-wrapper--small col-sm-6">
+                <label class="contacts__field-label" for="orderRegion">
+                  <span class="contacts__label-span">Регион</span>
+                </label>
+              </div>
+              <div class="input-wrapper input-wrapper--small col-sm-6">
+                <input class="contacts__field-input" id="orderRegion" type="text" name="orderRegion">
+              </div>
+            </div>
+            <div class="contacts__field row">
+              <div class="label-wrapper label-wrapper--small col-sm-6">
+                <label class="contacts__field-label" for="orderName">
+                  <span class="contacts__label-span contacts__label-span--person">Имя</span>
+                  <span class="contacts__label-span contacts__label-span--company">Имя получателя</span>
+                </label>
+              </div>
+              <div class="input-wrapper input-wrapper--small col-sm-6">
+                <input class="contacts__field-input" id="orderName" type="text" name="orderName">
+              </div>
+            </div>
+            <div class="contacts__field row">
+              <div class="label-wrapper label-wrapper--small col-sm-6">
+                <label class="contacts__field-label" for="orderTel">
+                  <span class="contacts__label-span contacts__label-span--person">Телефон</span>
+                  <span class="contacts__label-span contacts__label-span--company">Телефон получателя</span>
+                </label>
+              </div>
+              <div class="input-wrapper input-wrapper--small col-sm-6">
+                <input class="contacts__field-input" id="orderTel" type="tel" name="orderTel">
+              </div>
+            </div>
+            <div class="contacts__field row">
+              <div class="label-wrapper label-wrapper--small col-sm-6">
+                <label class="contacts__field-label" for="orderEmail">
+                  <span class="contacts__label-span contacts__label-span--person">Электронная почта</span>
+                  <span class="contacts__label-span contacts__label-span--company">Электронная почта получателя</span>
+                </label>
+              </div>
+              <div class="input-wrapper input-wrapper--small col-sm-6">
+                <input class="contacts__field-input" id="orderEmail" type="email" name="orderEmail">
+              </div>
+            </div>
+          </div>
+          <div class="contacts__payment-delivery payment-delivery payment-delivery--company">
+            <div class="payment-delivery__fields row">
+              <div class="payment-delivery__column payment-delivery__column--delivery col-xs-12 col-sm-6">
+                <h3 class="payment-delivery__column-heading">Доставка</h3>
+                <div class="payment-delivery__column-content">
+                  <div class="payment-delivery__options">
+                    <div class="input-wrapper input-wrapper--radio">
+                      <input class="payment-delivery__radio visually-hidden-input" id="orderCompanyDeliveryPickup" type="radio" name="dostavka-companiya" value="samovyvoz" checked>
+                    </div>
+                    <div class="label-wrapper label-wrapper--radio">
+                      <label class="payment-delivery__radio-label" for="orderCompanyDeliveryPickup">Самовывоз</label>
+                    </div>
+                    <div class="input-wrapper input-wrapper--radio">
+                      <input class="payment-delivery__radio visually-hidden-input" id="orderCompanyDeliveryCourier" type="radio" name="dostavka-companiya" value="kurier">
+                    </div>
+                    <div class="label-wrapper label-wrapper--radio">
+                      <label class="payment-delivery__radio-label" for="orderCompanyDeliveryCourier">Доставка курьером</label>
+                    </div>
+                    <div class="input-wrapper input-wrapper--radio">
+                      <input class="payment-delivery__radio visually-hidden-input" id="orderCompanyDeliveryCDEK" type="radio" name="dostavka-companiya" value="cdek">
+                    </div>
+                    <div class="label-wrapper label-wrapper--radio">
+                      <label class="payment-delivery__radio-label" for="orderCompanyDeliveryCDEK">СДЭК</label>
+                    </div>
+                  </div>
+                  <p class="payment-delivery__price-wrapper">
+                    <span class="payment-delivery__price-for">Цена доставки:</span>
+                    <span class="payment-delivery__price-amount">0,00 руб.</span>
+                  </p>
+                </div>
+              </div>
+              <div class="payment-delivery__column payment-delivery__column--payment col-xs-12 col-sm-6">
+                <h3 class="payment-delivery__column-heading">Оплата</h3>
+                <div class="payment-delivery__column-content">
+                  <div class="payment-delivery__options">
+                    <div class="input-wrapper input-wrapper--radio">
+                      <input class="payment-delivery__radio visually-hidden-input" id="orderCompanyPaymentCash" type="radio" name="oplata-companiya" value="nalichnie" checked>
+                    </div>
+                    <div class="label-wrapper label-wrapper--radio">
+                      <label class="payment-delivery__radio-label" for="orderCompanyPaymentCash">Наличными при получении</label>
+                    </div>
+                    <div class="input-wrapper input-wrapper--radio">
+                      <input class="payment-delivery__radio visually-hidden-input" id="orderCompanyPaymentCard" type="radio" name="oplata-companiya" value="karta-poluchenie">
+                    </div>
+                    <div class="label-wrapper label-wrapper--radio">
+                      <label class="payment-delivery__radio-label" for="orderCompanyPaymentCard">Картой при получении</label>
+                    </div>
+                    <div class="input-wrapper input-wrapper--radio">
+                      <input class="payment-delivery__radio visually-hidden-input" id="orderCompanyPaymentOnline" type="radio" name="oplata-companiya" value="karta-online">
+                    </div>
+                    <div class="label-wrapper label-wrapper--radio">
+                      <label class="payment-delivery__radio-label" for="orderCompanyPaymentOnline">Картой онлайн</label>
+                    </div>
+                  </div>
+                  <p class="payment-delivery__price-wrapper">
+                    <span class="payment-delivery__price-for">Сумма к оплате:</span>
+                    <span class="payment-delivery__price-amount">0,00 руб.</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="order-wrapper__payment-delivery payment-delivery payment-delivery--person order-section">
+          <h2 class="payment-delivery__header order-header">Выбор способов доставки и оплаты</h2>
+          <div class="payment-delivery__fields row">
+            <div class="payment-delivery__column payment-delivery__column--delivery col-xs-12 col-sm-6">
+              <h3 class="payment-delivery__column-heading">Доставка</h3>
+              <div class="payment-delivery__column-content">
+                <div class="payment-delivery__options">
+                  <div class="input-wrapper input-wrapper--radio">
+                    <input class="payment-delivery__radio visually-hidden-input" id="orderPersonDeliveryPickup" type="radio" name="dostavka" value="samovyvoz" checked>
+                  </div>
+                  <div class="label-wrapper label-wrapper--radio">
+                    <label class="payment-delivery__radio-label" for="orderPersonDeliveryPickup">Самовывоз</label>
+                  </div>
+                  <div class="input-wrapper input-wrapper--radio">
+                    <input class="payment-delivery__radio visually-hidden-input" id="orderPersonDeliveryCourier" type="radio" name="dostavka" value="kurier">
+                  </div>
+                  <div class="label-wrapper label-wrapper--radio">
+                    <label class="payment-delivery__radio-label" for="orderPersonDeliveryCourier">Доставка курьером</label>
+                  </div>
+                  <div class="input-wrapper input-wrapper--radio">
+                    <input class="payment-delivery__radio visually-hidden-input" id="orderPersonDeliveryCDEK" type="radio" name="dostavka" value="cdek">
+                  </div>
+                  <div class="label-wrapper label-wrapper--radio">
+                    <label class="payment-delivery__radio-label" for="orderPersonDeliveryCDEK">СДЭК</label>
+                  </div>
+                </div>
+                <p class="payment-delivery__price-wrapper">
+                  <span class="payment-delivery__price-for">Цена доставки:</span>
+                  <span class="payment-delivery__price-amount">0,00 руб.</span>
+                </p>
+              </div>
+            </div>
+            <div class="payment-delivery__column payment-delivery__column--payment col-xs-12 col-sm-6">
+              <h3 class="payment-delivery__column-heading">Оплата</h3>
+              <div class="payment-delivery__column-content">
+                <div class="payment-delivery__options">
+                  <div class="input-wrapper input-wrapper--radio">
+                    <input class="payment-delivery__radio visually-hidden-input" id="orderPersonPaymentCash" type="radio" name="oplata" value="nalichnie" checked>
+                  </div>
+                  <div class="label-wrapper label-wrapper--radio">
+                    <label class="payment-delivery__radio-label" for="orderPersonPaymentCash">Наличными при получении</label>
+                  </div>
+                  <div class="input-wrapper input-wrapper--radio">
+                    <input class="payment-delivery__radio visually-hidden-input" id="orderPersonPaymentCard" type="radio" name="oplata" value="karta-poluchenie">
+                  </div>
+                  <div class="label-wrapper label-wrapper--radio">
+                    <label class="payment-delivery__radio-label" for="orderPersonPaymentCard">Картой при получении</label>
+                  </div>
+                  <div class="input-wrapper input-wrapper--radio">
+                    <input class="payment-delivery__radio visually-hidden-input" id="orderPersonPaymentOnline" type="radio" name="oplata" value="karta-online">
+                  </div>
+                  <div class="label-wrapper label-wrapper--radio">
+                    <label class="payment-delivery__radio-label" for="orderPersonPaymentOnline">Картой онлайн</label>
+                  </div>
+                </div>
+                <p class="payment-delivery__price-wrapper">
+                  <span class="payment-delivery__price-for">Сумма к оплате:</span>
+                  <span class="payment-delivery__price-amount">0,00 руб.</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="order-wrapper__address-commentary address-commentary order-section">
+          <h2 class="address-commentary__header order-header">Адрес доставки и комментарий к заказу</h2>
+          <div class="address-commentary__fields row">
+            <div class="label-wrapper label-wrapper--big col-xs-12">
+              <label class="address-commentary__textarea-label" for="orderAddress">Адрес доставки<sup class="star-required"> *</sup></label>
+            </div>
+            <div class="input-wrapper input-wrapper--textarea col-xs-12">
+              <textarea class="address-commentary__textarea address-commentary__textarea--address" id="orderAddress" rows="8" cols="80"></textarea>
+            </div>
+            <div class="label-wrapper label-wrapper--big col-xs-12">
+              <label class="address-commentary__textarea-label" for="orderCommentary">Комментарий к заказу</label>
+            </div>
+            <div class="input-wrapper input-wrapper--textarea col-xs-12">
+              <textarea class="address-commentary__textarea address-commentary__textarea--commentary" id="orderCommentary" rows="8" cols="80"></textarea>
+            </div>
+          </div>
+        </section>
+
+        <section class="order-wrapper__company-info company-info order-section">
+          <h2 class="company-info__header order-header">Данные получателя</h2>
+          <div class="company-info__fields">
+            <div class="company-info__field row">
+              <div class="label-wrapper label-wrapper--small col-sm-6">
+                <label class="company-info__field-label" for="orderCompanyINN">
+                  <span class="company-info__label-span">ОГРН/ИНН</span>
+                </label>
+              </div>
+              <div class="input-wrapper input-wrapper--small col-sm-6">
+                <input class="company-info__field-input" id="orderCompanyINN" type="text" name="orderCompanyINN">
+              </div>
+            </div>
+            <div class="company-info__field row">
+              <div class="label-wrapper label-wrapper--big col-sm-12">
+                <label class="company-info__field-label" for="orderCompanyName">
+                  <span class="company-info__label-span">Название организации<sup class="star-required"> *</sup></span>
+                </label>
+              </div>
+              <div class="input-wrapper input-wrapper--big col-sm-12">
+                <input class="company-info__field-input" id="orderCompanyName" type="text" name="orderCompanyName">
+              </div>
+            </div>
+            <div class="company-info__field row">
+              <div class="label-wrapper label-wrapper--big col-sm-12">
+                <label class="company-info__field-label" for="orderCompanyAddress">
+                  <span class="company-info__label-span">Юридический адрес</span>
+                </label>
+              </div>
+              <div class="input-wrapper input-wrapper--big col-sm-12">
+                <input class="company-info__field-input" id="orderCompanyAddress" type="text" name="orderCompanyAddress">
+              </div>
+            </div>
+            <div class="company-info__field row">
+              <div class="label-wrapper label-wrapper--big col-sm-12">
+                <label class="company-info__field-label" for="orderCompanyEmail">
+                  <span class="company-info__label-span">Email<sup class="star-required"> *</sup></span>
+                </label>
+              </div>
+              <div class="input-wrapper input-wrapper--big col-sm-12">
+                <input class="company-info__field-input" id="orderCompanyEmail" type="email" name="orderCompanyEmail">
+              </div>
+            </div>
+            <div class="company-info__field row">
+              <div class="label-wrapper label-wrapper--big col-sm-12">
+                <label class="company-info__field-label" for="orderCompanyPhone">
+                  <span class="company-info__label-span">Телефон</span>
+                </label>
+              </div>
+              <div class="input-wrapper input-wrapper--big col-sm-12">
+                <input class="company-info__field-input" id="orderCompanyPhone" type="tel" name="orderCompanyPhone">
+              </div>
+            </div>
+            <div class="company-info__field row">
+              <div class="label-wrapper label-wrapper--big col-sm-12">
+                <label class="company-info__field-label" for="orderCompanyFax">
+                  <span class="company-info__label-span">Факс</span>
+                </label>
+              </div>
+              <div class="input-wrapper input-wrapper--big col-sm-12">
+                <input class="company-info__field-input" id="orderCompanyFax" type="text" name="orderCompanyFax">
+              </div>
+            </div>
+            <div class="company-info__field row">
+              <div class="label-wrapper label-wrapper--big col-xs-12">
+                <label class="company-info__textarea-label" for="orderCompanyDeliveryAddress">Адрес доставки<sup class="star-required"> *</sup></label>
+              </div>
+              <div class="input-wrapper input-wrapper--textarea col-xs-12">
+                <textarea class="company-info__textarea company-info__textarea--address" id="orderCompanyDeliveryAddress" rows="8" cols="80"></textarea>
+              </div>
+            </div>
+            <div class="company-info__field row">
+              <div class="label-wrapper label-wrapper--big col-xs-12">
+                <label class="company-info__textarea-label" for="orderCompanyCommentary">Комментарий к заказу</label>
+              </div>
+              <div class="input-wrapper input-wrapper--textarea col-xs-12">
+                <textarea class="company-info__textarea company-info__textarea--commentary" id="orderCompanyCommentary" rows="8" cols="80"></textarea>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="submit-section">
+          <div class="submit-section__btn-wrapper row">
+            <button class="submit-section__btn" type="sumbit">Оформить заказ</button>
+          </div>
+        </section>
+      </div>
+    </form>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+</html>
