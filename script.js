@@ -28,14 +28,14 @@ $(document).ready(function() {
 
   deliveryCheckbox.each(function() {
     if ($(this).prop('checked')) {
-      $('label[for="'+$(this).attr('id')+'"]').addClass('active');
+      $('label[for="'+$(this).attr('id')+'"]').addClass('active-label');
     };
   });
 
   deliveryCheckbox.click(function() {
     $('input[name="'+$(this).attr('name')+'"]').each(function() {
-      $('label[for="'+$(this).attr('id')+'"]').removeClass('active');
+      $('label[for="'+$(this).attr('id')+'"]').removeClass('active-label');
     });
-    $('label[for="'+$(this).attr('id')+'"]').addClass('active');
+    $('label[for="'+$(this).attr('id')+'"]').addClass('active-label');
   });
 });

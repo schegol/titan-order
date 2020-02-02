@@ -3,6 +3,12 @@ body {
   font-family: "Open Sans", "Arial", sans-serif;
 }
 
+*,
+*::before,
+ *::after {
+   box-sizing: border-box;
+ }
+
 .visually-hidden-input {
   position: absolute;
   width: 1px;
@@ -28,16 +34,13 @@ body {
 .order-wrapper input,
 .order-wrapper select,
 .order-wrapper textarea {
-  width: calc(100% - 30px);
+  width: 100%;
   margin-bottom: 30px;
-  padding: 8px 13px 7px;
+  padding: 13px;
+  font: inherit;
   border: 1px solid #ccc;
   border-radius: 3px;
   transition: .2s ease-out;
-}
-
-.contacts__field-input--select {
-  width: 100% !important;
 }
 
 .order-wrapper textarea {
@@ -71,6 +74,7 @@ body {
 }
 
 .payment-delivery--company {
+  padding-top: 20px;
   border-top: 1px solid #009ca6;
 }
 
@@ -99,6 +103,7 @@ body {
   float: none !important;
   text-shadow: none;
   color: #FFF;
+  margin-bottom: 20px;
   padding: 11px 40px 13px;
   font-size: 17px;
   line-height: 20px;
@@ -124,6 +129,76 @@ body {
   box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
 }
 
-label.active {
+.payment-delivery__radio-label.active-label {
   color: #000;
+}
+
+.payment-delivery__label-img {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 95px;
+  height: 56px;
+  border: 1px solid transparent;
+}
+
+.payment-delivery__label-img::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 20px;
+  height: 20px;
+  background-color: #00b9c5;
+  border-radius: 50%;
+}
+
+.payment-delivery__radio-label.active-label .payment-delivery__label-img::after {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 9px;
+  width: 10px;
+  height: 7px;
+  border-bottom: 3px solid #fff;
+  border-left: 3px solid #fff;
+  transform: rotate(-45deg);
+}
+
+.payment-delivery__label-img img {
+  width: 100%;
+}
+
+.payment-delivery__radio-label.active-label .payment-delivery__label-img {
+  border-color: #00b9c5;
+}
+
+.payment-delivery__label-span {
+  padding-left: 10px;
+}
+
+.payment-delivery__column-heading {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.payment-delivery__price-wrapper {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.label-wrapper--radio label {
+  display: flex;
+  align-items: center;
+}
+
+.contacts__label-span {
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+@media (min-width: 768px) {
+  .contacts__label-span {
+    margin-bottom: 0;
+  }
 }
