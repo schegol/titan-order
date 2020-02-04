@@ -19,15 +19,23 @@
           <div class="contacts__fields">
             <div class="contacts__field row">
               <div class="label-wrapper label-wrapper--small col-sm-6">
-                <label class="contacts__field-label" for="orderLegalEntity">
+                <p class="contacts__field-label">
                   <span class="contacts__label-span">Тип плательщика</span>
-                </label>
+                </p>
               </div>
-              <div class="input-wrapper input-wrapper--small col-sm-6">
-                <select class="contacts__field-input contacts__field-input--select" id="orderLegalEntity" name="orderLegalEntity">
+              <div class="input-wrapper input-wrapper--small input-wrapper--entity-radio col-sm-6">
+                <!-- <select class="contacts__field-input contacts__field-input--select" id="orderLegalEntity" name="orderLegalEntity">
                   <option value="person" selected>Физическое лицо</option>
                   <option value="company">Юридическое лицо</option>
-                </select>
+                </select> -->
+                <label>
+                  <input class="contacts__radio-input visually-hidden-input" type="radio" name="orderLegalEntity" value="person" checked>
+                  <span class="contacts__label-span contacts__label-span--entity">Физическое лицо</span>
+                </label>
+                <label>
+                  <input class="contacts__radio-input visually-hidden-input" type="radio" name="orderLegalEntity" value="company">
+                  <span class="contacts__label-span contacts__label-span--entity">Юридическое лицо</span>
+                </label>
               </div>
             </div>
             <div class="contacts__field row">
@@ -269,13 +277,13 @@
               <label class="address-commentary__textarea-label" for="orderAddress">Адрес доставки<sup class="star-required"> *</sup></label>
             </div>
             <div class="input-wrapper input-wrapper--textarea col-xs-12">
-              <textarea class="address-commentary__textarea address-commentary__textarea--address" id="orderAddress" rows="8" cols="80"></textarea>
+              <textarea class="address-commentary__textarea address-commentary__textarea--address" id="orderAddress" rows="4"></textarea>
             </div>
             <div class="label-wrapper label-wrapper--big col-xs-12">
               <label class="address-commentary__textarea-label" for="orderCommentary">Комментарий к заказу</label>
             </div>
             <div class="input-wrapper input-wrapper--textarea col-xs-12">
-              <textarea class="address-commentary__textarea address-commentary__textarea--commentary" id="orderCommentary" rows="8" cols="80"></textarea>
+              <textarea class="address-commentary__textarea address-commentary__textarea--commentary" id="orderCommentary" rows="4"></textarea>
             </div>
           </div>
         </section>
@@ -348,7 +356,7 @@
                 <label class="company-info__textarea-label" for="orderCompanyDeliveryAddress">Адрес доставки<sup class="star-required"> *</sup></label>
               </div>
               <div class="input-wrapper input-wrapper--textarea col-xs-12">
-                <textarea class="company-info__textarea company-info__textarea--address" id="orderCompanyDeliveryAddress" rows="8" cols="80"></textarea>
+                <textarea class="company-info__textarea company-info__textarea--address" id="orderCompanyDeliveryAddress" rows="4"></textarea>
               </div>
             </div>
             <div class="company-info__field row">
@@ -356,7 +364,7 @@
                 <label class="company-info__textarea-label" for="orderCompanyCommentary">Комментарий к заказу</label>
               </div>
               <div class="input-wrapper input-wrapper--textarea col-xs-12">
-                <textarea class="company-info__textarea company-info__textarea--commentary" id="orderCompanyCommentary" rows="8" cols="80"></textarea>
+                <textarea class="company-info__textarea company-info__textarea--commentary" id="orderCompanyCommentary" rows="4"></textarea>
               </div>
             </div>
           </div>

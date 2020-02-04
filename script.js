@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  let legalEntity = $('#orderLegalEntity');
+  let legalEntity = $('input[name="orderLegalEntity"]');
   let companyInfoBlock = $('.company-info');
   let companyInfo = $('.company-info');
   let companyFields = $('[class$="--company"]');
